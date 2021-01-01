@@ -1,0 +1,20 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title すぐに消えるチャット
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/js/socket.io.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/crc-32/1.2.0/crc32.min.js")
+    script(src="/js/main.js" defer)
+  body
+    h1 すぐに消えるチャット
+    form#form
+      label
+        |name 
+        input#name(autocomplete="off")
+      .wrap
+        textarea#input(disabled="true")
+        button(disabled="true") send
+    ul.messages
